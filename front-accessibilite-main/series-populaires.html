@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séries | SériePop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-gray-600 to-gray-900 text-gray-100 leading-relaxed">
+
+    <header>
+        <nav class="bg-gray-800 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            role="navigation" aria-label="Navigation principale">
+
+            <!-- Logo et bouton burger, en ligne avec espacement -->
+            <div class="flex items-center justify-between w-full sm:w-auto">
+                <a href="./index.html"
+                    class="flex items-center space-x-2 bg-purple-600 text-white px-2 py-1 rounded-md font-semibold text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex-shrink-0 max-w-max"
+                    aria-label="Retour à l’accueil SériePop">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-7 h-7 fill-current">
+                        <path
+                            d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM144 432L144 464C144 472.8 151.2 480 160 480L192 480C200.8 480 208 472.8 208 464L208 432C208 423.2 200.8 416 192 416L160 416C151.2 416 144 423.2 144 432zM448 416C439.2 416 432 423.2 432 432L432 464C432 472.8 439.2 480 448 480L480 480C488.8 480 496 472.8 496 464L496 432C496 423.2 488.8 416 480 416L448 416zM144 304L144 336C144 344.8 151.2 352 160 352L192 352C200.8 352 208 344.8 208 336L208 304C208 295.2 200.8 288 192 288L160 288C151.2 288 144 295.2 144 304zM448 288C439.2 288 432 295.2 432 304L432 336C432 344.8 439.2 352 448 352L480 352C488.8 352 496 344.8 496 336L496 304C496 295.2 488.8 288 480 288L448 288zM144 176L144 208C144 216.8 151.2 224 160 224L192 224C200.8 224 208 216.8 208 208L208 176C208 167.2 200.8 160 192 160L160 160C151.2 160 144 167.2 144 176zM448 160C439.2 160 432 167.2 432 176L432 208C432 216.8 439.2 224 448 224L480 224C488.8 224 496 216.8 496 208L496 176C496 167.2 488.8 160 480 160L448 160z" />
+                    </svg>
+                    <span>SériePop</span>
+                </a>
+
+                <button id="menu-toggle"
+                    class="sm:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ml-auto"
+                    aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu principal -->
+            <ul id="menu" class="hidden sm:flex sm:flex-row sm:gap-6 sm:justify-center flex-1 mt-4 sm:mt-0" role="list">
+                <li><a href="./index.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Accueil</a>
+                </li>
+
+                <li class="relative">
+                    <button id="submenu-button"
+                        class="flex items-center gap-1 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        aria-haspopup="true" aria-expanded="false">
+                        Séries
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="submenu" class="hidden absolute left-0 mt-2 bg-gray-700 rounded-lg py-2 w-48 shadow-lg z-50"
+                        role="menu" aria-labelledby="submenu-button">
+                        <li><a href="./serie.html" class="block px-4 py-2 hover:bg-gray-600">Toutes les séries</a></li>
+                        <li><a href="./series-recentes.html" class="block px-4 py-2 hover:bg-gray-600">Séries
+                                récentes</a>
+                        </li>
+                        <li><a href="./series-populaires.html" class="block px-4 py-2 hover:bg-gray-600">Séries
+                                populaires</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./apropos.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">À
+                        propos</a></li>
+                <li><a href="./aide.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Aide</a>
+                </li>
+                <li><a href="./contact.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Recherche + Connexion -->
+            <div
+                class="mt-4 sm:mt-0 sm:ml-6 flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+                <form role="search" aria-label="Rechercher une série"
+                    class="relative flex-1 sm:flex-none w-full sm:w-auto">
+                    <label for="site-search" class="sr-only">Rechercher</label>
+                    <input id="site-search" type="search" placeholder="Rechercher..." name="q"
+                        class="w-full pl-10 pr-3 py-2 rounded-md text-gray-900 focus:ring-2 focus:outline-none focus:ring-blue-500" />
+                    <button type="submit"
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 focus:ring-2 focus:outline-none focus:ring-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5">
+                            <path fill="currentColor"
+                                d="M500.3 443.7L384 327.4a208 208 0 1 0-56.6 56.6l116.3 116.3a40 40 0 0 0 56.6-56.6zM208 352a144 144 0 1 1 0-288 144 144 0 0 1 0 288z" />
+                        </svg>
+                        <span class="sr-only">Rechercher</span>
+                    </button>
+                </form>
+
+                <a href="login.html"
+                    class="flex items-center space-x-2 px-4 py-2 text-white rounded-md hover:bg-purple-700 transition bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 focus:ring-2 focus:outline-none focus:ring-blue-500 w-full sm:w-auto justify-center sm:justify-start">
+                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                        class="w-5 h-5 fill-current">
+                        <path
+                            d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" />
+                    </svg>
+                    <span>Connexion</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Fil d’Ariane -->
+        <nav id="liste" aria-label="Fil d’Ariane" class="max-w-5xl mx-auto px-6 py-5">
+            <ol class="flex gap-2">
+                <li><a href="index.html"
+                        class="text-purple-400 hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500   ">Accueil</a>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li class="text-gray-300" aria-current="page">Séries Populaires</li>
+            </ol>
+        </nav>
+
+        <h1 class="flex justify-center items-center text-3xl font-bold text-purple-400 mb-6">Toutes les séries
+            populaires
+            disponibles</h1>
+
+
+        <p class="mb-10 text-lg text-white text-center max-w-3xl mx-auto">
+            Parcourez la liste des séries disponibles ci-dessous pour découvrir les informations détaillées sur chacune
+            d’entre
+            elles.
+        </p>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-6">
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:Arcane]" tabindex="0">
+                <img src="https://image.tmdb.org/t/p/w500/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-green-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 88%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    Arcane
+                </h3>
+            </a>
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:Breaking Bad]" tabindex="0">
+                <img src="https://fr.web.img2.acsta.net/pictures/18/07/23/11/26/3445791.jpg" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-green-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 96%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    Breaking Bad
+                </h3>
+            </a>
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:Stranger Things]" tabindex="0">
+                <img src="https://culturezone.fr/cdn/shop/files/04_STRANGER_THINGS_S4_01.webp?v=1733480114" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-green-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 92%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    Stranger Things
+                </h3>
+            </a>
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:Back Mirror]" tabindex="0">
+                <img src="https://image.tmdb.org/t/p/w500/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-green-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 81%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    Black Mirror
+                </h3>
+            </a>
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:Clone Wars]" tabindex="0">
+                <img src="https://image.tmdb.org/t/p/w500/e1nWfnnCVqxS2LeTO3dwGyAsG2V.jpg" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-green-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 89%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    Clone Wars
+                </h3>
+            </a>
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:Anne with an E]" tabindex="0">
+                <img src="https://image.tmdb.org/t/p/w500/6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-green-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 81%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    Anne with an E
+                </h3>
+            </a>
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:Zombies]" tabindex="0">
+                <img src="https://image.tmdb.org/t/p/w500/1fu3vZwqDEFOxFlitlDdYU86Ovr.jpg" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-orange-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 78%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    Zombies
+                </h3>
+            </a>
+
+            <a href="detailserie.html"
+                class="relative group cursor-pointer block h-[400px] focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="Voir le détail de la série [translate:House]" tabindex="0">
+                <img src="https://image.tmdb.org/t/p/w500/3Cz7ySOQJmqiuTdrc6CY0r65yDI.jpg" alt=""
+                    class="w-full h-full object-cover transition group-hover:opacity-80" />
+                <div class="absolute top-2 left-2 bg-black/70 text-green-400 text-xs font-bold px-2 py-1 rounded-full">
+                    Recommandé à 91%
+                </div>
+                <h3 lang="en"
+                    class="absolute bottom-0 left-0 right-0 pt-2 pb-2 text-center text-white font-semibold bg-gray-900">
+                    House
+                </h3>
+            </a>
+        </section>
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white p-6" role="contentinfo">
+        <ul class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <li><a href="./plan.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Plan
+                    du site</a></li>
+            <li><a href="./accessibilite.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Référentiel Général d’Amélioration de l’Accessibilité">RGAA</abbr></a>
+            </li>
+            <li><a href="./mentions_legales.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Mentions
+                    légales</a></li>
+            <li><a href="./cgu.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Conditions Générales d'Utilisation">CGU</abbr></a>
+            </li>
+            <li><a href="./rgpd.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Règlement Général sur la Protection des Données">RGPD</abbr></a>
+            </li>
+        </ul>
+        <p class="text-center text-sm sm:text-base text-gray-400 mt-4">
+            &copy; 2025 - ALAND Mélinda - DRINNHAUSEN Lou - SCHMITT Lola. Tous droits réservés.
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const submenuButton = document.getElementById('submenu-button');
+    const submenu = document.getElementById('submenu');
+
+    // Ouvre/ferme le menu burger
+    menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('hidden');
+    });
+
+    // Ouvre/ferme le sous-menu Séries (clic uniquement)
+    submenuButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const expanded = submenuButton.getAttribute('aria-expanded') === 'true';
+        submenuButton.setAttribute('aria-expanded', !expanded);
+        submenu.classList.toggle('hidden');
+    });
+
+    // Ferme le sous-menu si clic à l’extérieur
+    document.addEventListener('click', (e) => {
+        if (!submenuButton.contains(e.target) && !submenu.contains(e.target)) {
+            submenu.classList.add('hidden');
+            submenuButton.setAttribute('aria-expanded', false);
+        }
+    });
+</script>

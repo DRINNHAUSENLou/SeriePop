@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGU | SériePop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-gray-600 to-gray-900 text-gray-100 leading-relaxed">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="bg-gray-800 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            role="navigation" aria-label="Navigation principale">
+            <div class="flex items-center justify-between w-full sm:w-auto">
+                <a href="./index.html"
+                    class="flex items-center space-x-2 bg-purple-600 text-white px-2 py-1 rounded-md font-semibold text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex-shrink-0 max-w-max"
+                    aria-label="Retour à l’accueil SériePop">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-7 h-7 fill-current">
+                        <path
+                            d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM144 432L144 464C144 472.8 151.2 480 160 480L192 480C200.8 480 208 472.8 208 464L208 432C208 423.2 200.8 416 192 416L160 416C151.2 416 144 423.2 144 432zM448 416C439.2 416 432 423.2 432 432L432 464C432 472.8 439.2 480 448 480L480 480C488.8 480 496 472.8 496 464L496 432C496 423.2 488.8 416 480 416L448 416zM144 304L144 336C144 344.8 151.2 352 160 352L192 352C200.8 352 208 344.8 208 336L208 304C208 295.2 200.8 288 192 288L160 288C151.2 288 144 295.2 144 304zM448 288C439.2 288 432 295.2 432 304L432 336C432 344.8 439.2 352 448 352L480 352C488.8 352 496 344.8 496 336L496 304C496 295.2 488.8 288 480 288L448 288zM144 176L144 208C144 216.8 151.2 224 160 224L192 224C200.8 224 208 216.8 208 208L208 176C208 167.2 200.8 160 192 160L160 160C151.2 160 144 167.2 144 176zM448 160C439.2 160 432 167.2 432 176L432 208C432 216.8 439.2 224 448 224L480 224C488.8 224 496 216.8 496 208L496 176C496 167.2 488.8 160 480 160L448 160z" />
+                    </svg>
+                    <span>SériePop</span>
+                </a>
+
+                <button id="menu-toggle"
+                    class="sm:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ml-auto"
+                    aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- MENU PRINCIPAL -->
+            <ul id="menu" class="hidden sm:flex sm:flex-row sm:gap-6 sm:justify-center flex-1 mt-4 sm:mt-0" role="list">
+                <li><a href="./index.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Accueil</a>
+                </li>
+                <li><a href="./apropos.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">À
+                        propos</a>
+                </li>
+                <li><a href="./aide.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Aide</a>
+                </li>
+                <li><a href="./contact.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-8">
+        <!-- Fil d’Ariane -->
+        <nav aria-label="Fil d’Ariane" class="max-w-5xl mx-auto px-6 py-5">
+            <ol class="flex gap-2">
+                <li><a href="./index.html"
+                        class="text-purple-400 hover:underline focus:ring-2 focus:outline-none focus:ring-offset-2 focus:ring-blue-500">Accueil</a>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li class="text-gray-300" aria-current="page"><abbr
+                        title="Conditions Générales d'Utilisation">CGU</abbr></li>
+            </ol>
+        </nav>
+
+        <h1 class="text-3xl font-bold text-purple-400 text-center mb-6">Conditions Générales d'Utilisation</h1>
+
+        <!-- Contenu principal -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">1. Objet du site</h2>
+            <p>
+                Les présentes Conditions Générales d’Utilisation (CGU) ont pour objet de définir les modalités d’accès
+                et
+                d’utilisation du site <strong>SériePop</strong>, accessible à l’adresse <a href="./index.html"
+                    class="text-blue-400 underline hover:text-blue-300">www.seriepop.fr</a>.
+                En naviguant sur ce site, l’utilisateur reconnaît avoir pris connaissance et accepté sans réserve les
+                présentes
+                CGU.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">2. Accès au site</h2>
+            <p>
+                Le site est accessible gratuitement à tout utilisateur disposant d’une connexion Internet.
+                <strong>SériePop</strong>
+                se réserve le droit d’interrompre ou de suspendre temporairement l’accès au site pour des raisons de
+                maintenance
+                ou de mise à jour, sans notification préalable.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">3. Création de compte</h2>
+            <p>
+                L’accès à certaines fonctionnalités nécessite la création d’un compte utilisateur. Chaque utilisateur
+                s’engage à
+                fournir
+                des informations exactes lors de l’inscription et à maintenir la confidentialité de ses identifiants.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">4. Propriété intellectuelle</h2>
+            <p>
+                Tous les contenus (textes, images, vidéos, logos, icônes, etc.) présents sur le site
+                <strong>SériePop</strong>
+                sont protégés par les lois françaises et internationales relatives au droit d’auteur et à la propriété
+                intellectuelle. Toute reproduction ou exploitation non autorisée du site est strictement interdite.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">5. Responsabilités</h2>
+            <p>
+                L’équipe de <strong>SériePop</strong> met tout en œuvre pour garantir la qualité et l’exactitude des
+                informations diffusées, mais ne peut être tenue responsable des erreurs, interruptions, ou
+                indisponibilités du
+                site.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">6. Données personnelles</h2>
+            <p>
+                Les informations collectées sont traitées conformément au
+                <a href="./rgpd.html" class="text-blue-400 underline hover:text-blue-300">Règlement Général sur la
+                    Protection des Données</a>.
+                Pour plus d’informations, veuillez consulter notre page dédiée à la protection des données personnelles.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">7. Liens externes</h2>
+            <p>
+                Le site peut contenir des liens vers des sites tiers. <strong>SériePop</strong> n’exerce aucun contrôle
+                sur le
+                contenu de ces sites et décline toute responsabilité relative à leur fiabilité ou à leur politique de
+                confidentialité.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">8. Modification des <abbr
+                    title="Conditions Générales d'Utilisation">CGU</abbr></h2>
+            <p>
+                <strong>SériePop</strong> se réserve le droit de modifier les présentes <abbr
+                    title="Conditions Générales d'Utilisation">CGU</abbr> à tout moment. Les
+                utilisateurs
+                seront
+                informés de ces modifications et invités à consulter la version la plus récente disponible sur cette
+                page.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2">9. Loi applicable</h2>
+            <p>
+                Les présentes <abbr title="Conditions Générales d'Utilisation">CGU</abbr> sont soumises au droit
+                français. En cas de litige, et après tentative de résolution
+                amiable,
+                les tribunaux compétents seront ceux de Paris, sauf disposition légale contraire.
+            </p>
+        </section>
+
+        <p class="text-center text-gray-400 text-sm mt-8">
+            Dernière mise à jour : 17 octobre 2025
+        </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white p-6" role="contentinfo">
+        <ul class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <li><a href="./plan.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Plan
+                    du site</a></li>
+            <li><a href="./accessibilite.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Référentiel Général d’Amélioration de l’Accessibilité">RGAA</abbr></a>
+            </li>
+            <li><a href="./mentions_legales.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Mentions
+                    légales</a></li>
+            <li><a href="./cgu.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Conditions Générales d'Utilisation">CGU</abbr></a>
+            </li>
+            <li><a href="./rgpd.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Règlement Général sur la Protection des Données">RGPD</abbr></a>
+            </li>
+        </ul>
+        <p class="text-center text-sm sm:text-base text-gray-400 mt-4">
+            &copy; 2025 - ALAND Mélinda - DRINNHAUSEN Lou - SCHMITT Lola. Tous droits réservés.
+        </p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

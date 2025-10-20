@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion | SériePop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-gray-600 to-gray-900 text-gray-100 leading-relaxed">
+
+    <header>
+        <nav class="bg-gray-800 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            role="navigation" aria-label="Navigation principale">
+
+            <!-- Logo et bouton burger, en ligne avec espacement -->
+            <div class="flex items-center justify-between w-full sm:w-auto">
+                <a href="./index.html"
+                    class="flex items-center space-x-2 bg-purple-600 text-white px-2 py-1 rounded-md font-semibold text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex-shrink-0 max-w-max"
+                    aria-label="Retour à l’accueil SériePop">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-7 h-7 fill-current">
+                        <path
+                            d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM144 432L144 464C144 472.8 151.2 480 160 480L192 480C200.8 480 208 472.8 208 464L208 432C208 423.2 200.8 416 192 416L160 416C151.2 416 144 423.2 144 432zM448 416C439.2 416 432 423.2 432 432L432 464C432 472.8 439.2 480 448 480L480 480C488.8 480 496 472.8 496 464L496 432C496 423.2 488.8 416 480 416L448 416zM144 304L144 336C144 344.8 151.2 352 160 352L192 352C200.8 352 208 344.8 208 336L208 304C208 295.2 200.8 288 192 288L160 288C151.2 288 144 295.2 144 304zM448 288C439.2 288 432 295.2 432 304L432 336C432 344.8 439.2 352 448 352L480 352C488.8 352 496 344.8 496 336L496 304C496 295.2 488.8 288 480 288L448 288zM144 176L144 208C144 216.8 151.2 224 160 224L192 224C200.8 224 208 216.8 208 208L208 176C208 167.2 200.8 160 192 160L160 160C151.2 160 144 167.2 144 176zM448 160C439.2 160 432 167.2 432 176L432 208C432 216.8 439.2 224 448 224L480 224C488.8 224 496 216.8 496 208L496 176C496 167.2 488.8 160 480 160L448 160z" />
+                    </svg>
+                    <span>SériePop</span>
+                </a>
+
+                <button id="menu-toggle"
+                    class="sm:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ml-auto"
+                    aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu principal -->
+            <ul id="menu" class="hidden sm:flex sm:flex-row sm:gap-6 sm:justify-center flex-1 mt-4 sm:mt-0" role="list">
+                <li><a href="./index.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Accueil</a>
+                </li>
+
+                <li class="relative">
+                    <button id="submenu-button"
+                        class="flex items-center gap-1 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        aria-haspopup="true" aria-expanded="false">
+                        Séries
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="submenu" class="hidden absolute left-0 mt-2 bg-gray-700 rounded-lg py-2 w-48 shadow-lg z-50"
+                        role="menu" aria-labelledby="submenu-button">
+                        <li><a href="./serie.html" class="block px-4 py-2 hover:bg-gray-600">Toutes les séries</a></li>
+                        <li><a href="./series-recentes.html" class="block px-4 py-2 hover:bg-gray-600">Séries
+                                récentes</a>
+                        </li>
+                        <li><a href="./series-populaires.html" class="block px-4 py-2 hover:bg-gray-600">Séries
+                                populaires</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./apropos.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">À
+                        propos</a></li>
+                <li><a href="./aide.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Aide</a>
+                </li>
+                <li><a href="./contact.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Recherche + Connexion -->
+            <div
+                class="mt-4 sm:mt-0 sm:ml-6 flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+                <form role="search" aria-label="Rechercher une série"
+                    class="relative flex-1 sm:flex-none w-full sm:w-auto">
+                    <label for="site-search" class="sr-only">Rechercher</label>
+                    <input id="site-search" type="search" placeholder="Rechercher..." name="q"
+                        class="w-full pl-10 pr-3 py-2 rounded-md text-gray-900 focus:ring-2 focus:outline-none focus:ring-blue-500" />
+                    <button type="submit"
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 focus:ring-2 focus:outline-none focus:ring-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5">
+                            <path fill="currentColor"
+                                d="M500.3 443.7L384 327.4a208 208 0 1 0-56.6 56.6l116.3 116.3a40 40 0 0 0 56.6-56.6zM208 352a144 144 0 1 1 0-288 144 144 0 0 1 0 288z" />
+                        </svg>
+                        <span class="sr-only">Rechercher</span>
+                    </button>
+                </form>
+
+                <a href="login.html"
+                    class="flex items-center space-x-2 px-4 py-2 text-white rounded-md hover:bg-purple-700 transition bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 focus:ring-2 focus:outline-none focus:ring-blue-500 w-full sm:w-auto justify-center sm:justify-start">
+                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                        class="w-5 h-5 fill-current">
+                        <path
+                            d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" />
+                    </svg>
+                    <span>Connexion</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN -->
+    <main id="contenu-principal" class="min-h-screen flex flex-col items-center justify-center px-6 py-10">
+
+        <div class="w-full max-w-lg bg-gray-900 p-8 shadow-lg">
+            <h1 class="text-3xl font-bold text-purple-400 mb-6 text-center">Connexion</h1>
+
+            <form id="loginForm" action="#" method="post" novalidate aria-describedby="form-info" class="space-y-6"
+                aria-live="polite" aria-atomic="true" aria-relevant="additions removals">
+
+                <p id="form-info" class="text-sm text-gray-400">
+                    Tous les champs marqués d’un <span aria-hidden="true">*</span> sont obligatoires.
+                </p>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block mb-1 font-semibold">Adresse e-mail <span aria-hidden="true"
+                            class="text-red-400">*</span></label>
+                    <p id="desc-email" class="text-gray-400 text-sm mb-1" aria-live="polite" aria-atomic="true">
+                        Exemple : nom@domaine.com
+                    </p>
+                    <input type="email" id="email" name="email" required aria-required="true"
+                        aria-describedby="desc-email error-email charcount-email" aria-invalid="false"
+                        class="w-full px-3 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-gray-700 focus:border-purple-500"
+                        maxlength="100" />
+                    <p id="charcount-email" class="text-gray-400 text-sm mt-1" aria-live="polite" aria-atomic="true">
+                        0 / 100 caractères
+                    </p>
+                    <p id="error-email" class="text-red-400 text-sm mt-1 hidden" role="alert" aria-live="assertive">
+                        Veuillez saisir une adresse e-mail valide.
+                    </p>
+                </div>
+
+                <!-- Mot de passe -->
+                <div>
+                    <label for="password" class="block mb-1 font-semibold">Mot de passe <span aria-hidden="true"
+                            class="text-red-400">*</span></label>
+                    <p id="desc-password" class="text-gray-400 text-sm mb-1" aria-live="polite" aria-atomic="true">
+                        Doit contenir au moins 8 caractères.
+                    </p>
+                    <input type="password" id="password" name="password" required aria-required="true"
+                        aria-describedby="desc-password error-password charcount-password" aria-invalid="false"
+                        class="w-full px-3 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-gray-700 focus:border-purple-500"
+                        minlength="8" maxlength="50" />
+                    <p id="charcount-password" class="text-gray-400 text-sm mt-1" aria-live="polite" aria-atomic="true">
+                        0 / 50 caractères
+                    </p>
+                    <p id="error-password" class="text-red-400 text-sm mt-1 hidden" role="alert" aria-live="assertive">
+                        Le mot de passe doit contenir au moins 8 caractères.
+                    </p>
+                </div>
+
+                <!-- Erreur générale -->
+                <div role="alert" class="bg-red-600 text-white px-3 py-2 rounded-md hidden" id="login-error"
+                    tabindex="-1" aria-live="assertive">
+                    Adresse e-mail ou mot de passe incorrect.
+                </div>
+
+                <!-- Bouton -->
+                <a href="./serie.html"
+                    class="block text-center w-full px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    Se connecter
+                </a>
+
+                <!-- Lien secondaire -->
+                <p class="text-sm text-center text-gray-400 mt-4">
+                    Pas encore de compte ?
+                    <a href="#" class="text-purple-400 hover:underline">Créer un compte</a>
+                </p>
+            </form>
+        </div>
+
+        <script>
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+
+            const errorEmail = document.getElementById('error-email');
+            const errorPassword = document.getElementById('error-password');
+
+            const charCountEmail = document.getElementById('charcount-email');
+            const charCountPassword = document.getElementById('charcount-password');
+
+            function validateEmail(value) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(value);
+            }
+
+            function validatePassword(value) {
+                return value.length >= 8;
+            }
+
+            function updateFieldState(field, isValid, errorElement) {
+                if (isValid) {
+                    field.setAttribute('aria-invalid', 'false');
+                    errorElement.classList.add('hidden');
+                } else {
+                    field.setAttribute('aria-invalid', 'true');
+                    errorElement.classList.remove('hidden');
+                }
+            }
+
+            email.addEventListener('input', () => {
+                charCountEmail.textContent = `${email.value.length} / 100 caractères`;
+                updateFieldState(email, validateEmail(email.value), errorEmail);
+            });
+
+            email.addEventListener('blur', () => {
+                updateFieldState(email, validateEmail(email.value), errorEmail);
+            });
+
+            password.addEventListener('input', () => {
+                charCountPassword.textContent = `${password.value.length} / 50 caractères`;
+                updateFieldState(password, validatePassword(password.value), errorPassword);
+            });
+
+            password.addEventListener('blur', () => {
+                updateFieldState(password, validatePassword(password.value), errorPassword);
+            });
+        </script>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white p-6" role="contentinfo">
+        <ul class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <li><a href="./plan.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Plan
+                    du site</a></li>
+            <li><a href="./accessibilite.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Référentiel Général d’Amélioration de l’Accessibilité">RGAA</abbr></a>
+            </li>
+            <li><a href="./mentions_legales.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Mentions
+                    légales</a></li>
+            <li><a href="./cgu.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Conditions Générales d'Utilisation">CGU</abbr></a>
+            </li>
+            <li><a href="./rgpd.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Règlement Général sur la Protection des Données">RGPD</abbr></a>
+            </li>
+        </ul>
+        <p class="text-center text-sm sm:text-base text-gray-400 mt-4">
+            &copy; 2025 - ALAND Mélinda - DRINNHAUSEN Lou - SCHMITT Lola. Tous droits réservés.
+        </p>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const submenuButton = document.getElementById('submenu-button');
+    const submenu = document.getElementById('submenu');
+
+    // Ouvre/ferme le menu burger
+    menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('hidden');
+    });
+
+    // Ouvre/ferme le sous-menu Séries (clic uniquement)
+    submenuButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const expanded = submenuButton.getAttribute('aria-expanded') === 'true';
+        submenuButton.setAttribute('aria-expanded', !expanded);
+        submenu.classList.toggle('hidden');
+    });
+
+    // Ferme le sous-menu si clic à l’extérieur
+    document.addEventListener('click', (e) => {
+        if (!submenuButton.contains(e.target) && !submenu.contains(e.target)) {
+            submenu.classList.add('hidden');
+            submenuButton.setAttribute('aria-expanded', false);
+        }
+    });
+</script>

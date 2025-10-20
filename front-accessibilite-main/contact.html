@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SériePop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-gray-600 to-gray-900 text-gray-100 leading-relaxed">
+
+    <header>
+        <nav class="bg-gray-800 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between"
+            role="navigation" aria-label="Navigation principale">
+
+            <!-- Logo et bouton burger, en ligne avec espacement -->
+            <div class="flex items-center justify-between w-full sm:w-auto">
+                <a href="./index.html"
+                    class="flex items-center space-x-2 bg-purple-600 text-white px-2 py-1 rounded-md font-semibold text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex-shrink-0 max-w-max"
+                    aria-label="Retour à l’accueil SériePop">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-7 h-7 fill-current">
+                        <path
+                            d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM144 432L144 464C144 472.8 151.2 480 160 480L192 480C200.8 480 208 472.8 208 464L208 432C208 423.2 200.8 416 192 416L160 416C151.2 416 144 423.2 144 432zM448 416C439.2 416 432 423.2 432 432L432 464C432 472.8 439.2 480 448 480L480 480C488.8 480 496 472.8 496 464L496 432C496 423.2 488.8 416 480 416L448 416zM144 304L144 336C144 344.8 151.2 352 160 352L192 352C200.8 352 208 344.8 208 336L208 304C208 295.2 200.8 288 192 288L160 288C151.2 288 144 295.2 144 304zM448 288C439.2 288 432 295.2 432 304L432 336C432 344.8 439.2 352 448 352L480 352C488.8 352 496 344.8 496 336L496 304C496 295.2 488.8 288 480 288L448 288zM144 176L144 208C144 216.8 151.2 224 160 224L192 224C200.8 224 208 216.8 208 208L208 176C208 167.2 200.8 160 192 160L160 160C151.2 160 144 167.2 144 176zM448 160C439.2 160 432 167.2 432 176L432 208C432 216.8 439.2 224 448 224L480 224C488.8 224 496 216.8 496 208L496 176C496 167.2 488.8 160 480 160L448 160z" />
+                    </svg>
+                    <span>SériePop</span>
+                </a>
+
+                <button id="menu-toggle"
+                    class="sm:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ml-auto"
+                    aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu principal -->
+            <ul id="menu" class="hidden sm:flex sm:flex-row sm:gap-6 sm:justify-center flex-1 mt-4 sm:mt-0" role="list">
+                <li><a href="./index.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Accueil</a>
+                </li>
+
+                <li class="relative">
+                    <button id="submenu-button"
+                        class="flex items-center gap-1 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        aria-haspopup="true" aria-expanded="false">
+                        Séries
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="submenu" class="hidden absolute left-0 mt-2 bg-gray-700 rounded-lg py-2 w-48 shadow-lg z-50"
+                        role="menu" aria-labelledby="submenu-button">
+                        <li><a href="./serie.html" class="block px-4 py-2 hover:bg-gray-600">Toutes les séries</a></li>
+                        <li><a href="./series-recentes.html" class="block px-4 py-2 hover:bg-gray-600">Séries
+                                récentes</a>
+                        </li>
+                        <li><a href="./series-populaires.html" class="block px-4 py-2 hover:bg-gray-600">Séries
+                                populaires</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./apropos.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">À
+                        propos</a></li>
+                <li><a href="./aide.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Aide</a>
+                </li>
+                <li><a href="./contact.html"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Recherche + Connexion -->
+            <div
+                class="mt-4 sm:mt-0 sm:ml-6 flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+                <form role="search" aria-label="Rechercher une série"
+                    class="relative flex-1 sm:flex-none w-full sm:w-auto">
+                    <label for="site-search" class="sr-only">Rechercher</label>
+                    <input id="site-search" type="search" placeholder="Rechercher..." name="q"
+                        class="w-full pl-10 pr-3 py-2 rounded-md text-gray-900 focus:ring-2 focus:outline-none focus:ring-blue-500" />
+                    <button type="submit"
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 focus:ring-2 focus:outline-none focus:ring-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5">
+                            <path fill="currentColor"
+                                d="M500.3 443.7L384 327.4a208 208 0 1 0-56.6 56.6l116.3 116.3a40 40 0 0 0 56.6-56.6zM208 352a144 144 0 1 1 0-288 144 144 0 0 1 0 288z" />
+                        </svg>
+                        <span class="sr-only">Rechercher</span>
+                    </button>
+                </form>
+
+                <a href="login.html"
+                    class="flex items-center space-x-2 px-4 py-2 text-white rounded-md hover:bg-purple-700 transition bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 focus:ring-2 focus:outline-none focus:ring-blue-500 w-full sm:w-auto justify-center sm:justify-start">
+                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                        class="w-5 h-5 fill-current">
+                        <path
+                            d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" />
+                    </svg>
+                    <span>Connexion</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN -->
+    <main id="contenu-principal" class="max-w-5xl mx-auto px-6 py-10">
+
+        <!-- Fil d’Ariane -->
+        <nav id="formulaire" aria-label="Fil d’Ariane" class="max-w-5xl mx-auto px-6 py-5">
+            <ol class="flex gap-2">
+                <li>
+                    <a href="./index.html"
+                        class="text-purple-400 hover:underline focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Accueil
+                    </a>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li class="text-gray-300" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+
+        <h1 class="text-3xl font-bold text-purple-400 text-center mb-6">Contactez-nous</h1>
+
+        <p class="mb-10 text-lg text-white text-center max-w-3xl mx-auto">
+            Cette page vous permet de nous contacter facilement. Vous pouvez nous écrire pour toute question, demande
+            d’information ou assistance.
+        </p>
+
+        <!-- FORMULAIRE -->
+        <div class="flex justify-center items-center">
+            <form id="contactForm" class="grid gap-6 max-w-xl w-full bg-gray-800 p-6 rounded-lg shadow-lg" novalidate
+                aria-labelledby="form-title" aria-describedby="form-desc">
+
+                <h3 id="form-title" class="text-2xl font-bold text-purple-400">Formulaire de contact</h3>
+                <p id="form-desc" class="text-sm text-gray-300">
+                    Les champs marqués d’un <span class="text-red-400">*</span> sont obligatoires.
+                </p>
+
+                <!-- Identité -->
+                <fieldset class="space-y-4">
+                    <p id="error-type" class="text-red-400 text-sm hidden mb-1" role="alert">
+                        Veuillez sélectionner une option.
+                    </p>
+                    <legend class="font-semibold">Vous êtes : <span class="text-red-400">*</span></legend>
+                    <div class="flex gap-4">
+                        <label>
+                            <input type="radio" name="type" value="particulier" required aria-required="true"
+                                class="mr-2 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Particulier
+                        </label>
+                        <label>
+                            <input type="radio" name="type" value="entreprise"
+                                class="mr-2 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Entreprise
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Nom -->
+                <div>
+                    <label for="nom" class="block font-semibold">Nom <span class="text-red-400">*</span></label>
+                    <p id="error-nom" class="text-red-400 text-sm hidden mb-1" role="alert">
+                        Veuillez saisir votre nom.
+                    </p>
+                    <input type="text" id="nom" name="nom" required aria-required="true" aria-describedby="desc-nom"
+                        class="border rounded p-2 w-full text-gray-900 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <p id="desc-nom" class="text-gray-400 text-sm">Tapez votre nom complet.</p>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block font-semibold">Email <span class="text-red-400">*</span></label>
+                    <p id="error-email" class="text-red-400 text-sm hidden mb-1" role="alert">
+                        Veuillez entrer un email valide.
+                    </p>
+                    <input type="email" id="email" name="email" required aria-required="true"
+                        aria-describedby="desc-email"
+                        class="border rounded p-2 w-full text-gray-900 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <p id="desc-email" class="text-gray-400 text-sm">Saisissez une adresse e-mail valide (exemple :
+                        nom@domaine.fr).</p>
+                </div>
+
+                <!-- Téléphone -->
+                <div>
+                    <label for="telephone" class="block font-semibold">Téléphone</label>
+                    <p id="error-telephone" class="text-red-400 text-sm hidden mb-1" role="alert">
+                        Veuillez entrer un numéro valide (10 chiffres).
+                    </p>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" aria-describedby="desc-tel"
+                        class="border rounded p-2 w-full text-gray-900 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        placeholder="Exemple : 0612345678">
+                    <p id="desc-tel" class="text-gray-400 text-sm">
+                        Entrez votre numéro à 10 chiffres, sans espaces ni points.
+                    </p>
+                </div>
+
+                <!-- Sujet -->
+                <div>
+                    <label for="sujet" class="block font-semibold">Sujet de votre demande <span
+                            class="text-red-400">*</span></label>
+                    <p id="error-sujet" class="text-red-400 text-sm hidden mb-1" role="alert">
+                        Veuillez choisir un sujet.
+                    </p>
+                    <select id="sujet" name="sujet" required aria-required="true"
+                        class="border rounded p-2 w-full text-gray-900 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        <option value="" disabled selected>-- Choisissez un sujet --</option>
+                        <option value="bug">Signaler un bug</option>
+                        <option value="assistance">Demander de l’aide</option>
+                        <option value="infos">Demande d’informations</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <!-- Moyens de contact -->
+                <fieldset class="space-y-4">
+                    <legend class="font-semibold">
+                        Comment souhaitez-vous être contacté ? <span class="text-red-400">*</span>
+                    </legend>
+                    <p id="error-contact_mode" class="text-red-400 text-sm hidden mb-1" role="alert">
+                        Veuillez sélectionner une option.
+                    </p>
+                    <div class="flex gap-4">
+                        <label>
+                            <input type="radio" name="contact_mode" value="email" required aria-required="true"
+                                class="mr-2 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Email
+                        </label>
+                        <label>
+                            <input type="radio" name="contact_mode" value="telephone"
+                                class="mr-2 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Téléphone
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Message -->
+                <div>
+                    <label for="message" class="block font-semibold">Message <span class="text-red-400">*</span></label>
+                    <p id="error-message" class="text-red-400 text-sm hidden mb-1" role="alert">
+                        Le message ne peut pas être vide.
+                    </p>
+                    <textarea id="message" name="message" rows="5" required aria-required="true" maxlength="500"
+                        aria-describedby="desc-msg compteur"
+                        class="border rounded p-2 w-full text-gray-900 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"></textarea>
+
+                    <p id="desc-msg" class="text-gray-400 text-sm">
+                        Saisissez votre message (maximum 500 caractères).
+                    </p>
+                    <p id="compteur" class="text-sm text-gray-400" aria-live="polite">
+                        0 / 500 caractères
+                    </p>
+                </div>
+
+                <!-- Bouton -->
+                <button type="submit"
+                    class="bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full px-6 py-2 font-semibold hover:from-purple-700 hover:to-pink-600 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Envoyer
+                </button>
+            </form>
+
+            <!-- Récapitulatif (accessible) -->
+            <div id="recap" role="status" aria-live="polite" class="sr-only mt-4"></div>
+        </div>
+
+        <!-- TABLEAU COMPLEXE AVEC SKIP LINK -->
+        <section aria-labelledby="support-table" class="mt-12 relative">
+            <h3 id="support-table" class="text-2xl font-bold text-purple-400 mb-4">Nos contacts par service</h3>
+            <p id="desc-table" class="sr-only">
+                Tableau de contacts : utilisez les flèches pour naviguer cellule par cellule.
+                Appuyez sur Tab après la dernière cellule pour passer à la section suivante.
+            </p>
+
+            <!-- Tableau accessible -->
+            <table class="w-full border-collapse border border-gray-700 text-sm" aria-describedby="desc-table">
+                <caption class="text-left p-2">Coordonnées selon le type de service</caption>
+                <thead class="bg-gray-700 text-gray-100">
+                    <tr>
+                        <th scope="col" id="th-service" class="border p-2">Service</th>
+                        <th scope="col" id="th-resp" class="border p-2">Responsable</th>
+                        <th scope="col" id="th-mail" class="border p-2">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" id="srv1" class="border p-2">Support technique</th>
+                        <td headers="srv1 th-resp" class="border p-2">Mme Loucoquette</td>
+                        <td headers="srv1 th-mail" class="border p-2">
+                            <a href="mailto:loulou@gmail.com"
+                                class="inline-flex items-center gap-1 text-blue-400 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                aria-label="Envoyer un email à loulou@gmail.com (ouvre votre client de messagerie)">
+                                loulou@gmail.com
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 inline-block"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" id="srv2" class="border p-2">Responsable design</th>
+                        <td headers="srv2 th-resp" class="border p-2">Mme Mélindamour</td>
+                        <td headers="srv2 th-mail" class="border p-2">
+                            <a href="mailto:melindamour@gmail.com"
+                                class="inline-flex items-center gap-1 text-blue-400 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                aria-label="Envoyer un email à melindamour@gmail.com (ouvre votre client de messagerie)">
+                                melindamour@gmail.com
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 inline-block"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" id="srv3" class="border p-2">Gestion des séries</th>
+                        <td headers="srv3 th-resp" class="border p-2">Mme Lolasticocotte</td>
+                        <td headers="srv3 th-mail" class="border p-2">
+                            <a href="mailto:lolasticocotte@gmail.com"
+                                class="inline-flex items-center gap-1 text-blue-400 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                aria-label="Envoyer un email à lolasticocotte@gmail.com (ouvre votre client de messagerie)">
+                                lolasticocotte@gmail.com
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 inline-block"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Skip Link pour sortir du tableau -->
+            <a href="#section-apres-tableau"
+                class="skip-table absolute left-[-9999px] opacity-0 bg-purple-700 text-white font-semibold px-3 py-2 rounded-md focus:left-1/2 focus:top-auto focus:opacity-100 focus:transform focus:-translate-x-1/2 focus:outline-none focus:ring-4 focus:ring-purple-400 transition-all duration-200"
+                aria-label="Quitter le tableau et passer à la section suivante">
+                Sortir du tableau / Passer à la section suivante
+            </a>
+
+            <!-- Liens de contournement après tableau -->
+            <nav id="section-apres-tableau" aria-label="Liens de contournement après le tableau" class="mt-4">
+                <ul class="list-disc ml-6">
+                    <li><a href="#apres-tableau"
+                            class="hover:underline focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Aller à la
+                            section suivante</a></li>
+                    <li><a href="#formulaire"
+                            class="hover:underline focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Retour au
+                            formulaire</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Section après tableau -->
+        <section id="apres-tableau" class="mt-8">
+            <h3 class="text-xl font-bold text-purple-400">Autres moyens de nous contacter</h3>
+            <p>Nous sommes aussi présents sur les réseaux sociaux.</p>
+
+            <div class="flex gap-6 mt-4">
+                <!-- LinkedIn -->
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-blue-500 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    aria-label="Page LinkedIn — ce lien s’ouvre dans un nouvel onglet">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                        <path
+                            d="M20.447 20.452H16.9v-5.569c0-1.327-.027-3.037-1.85-3.037-1.853 0-2.137 1.445-2.137 2.939v5.667h-3.55V9h3.41v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.268 2.369 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065c0-1.139.925-2.065 2.063-2.065 1.14 0 2.065.926 2.065 2.065 0 1.14-.925 2.065-2.065 2.065zM6.816 20.452H3.857V9h2.959v11.452z" />
+                    </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-pink-500 focus:ring-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    aria-label="Page Instagram (nouvelle fenêtre, lien cliquable)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.263 2.242 1.325 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.325 3.608-.975.975-2.242 1.263-3.608 1.325-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.263-2.242-1.325-3.608C2.175 15.646 2.163 15.266 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.325-3.608.975-.975 2.242-1.263 3.608-1.325C8.416 2.175 8.796 2.163 12 2.163z" />
+                        <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324z" />
+                    </svg>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Script accès formulaire et récap -->
+        <script>
+            // Validation champ individuel
+            document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
+                field.addEventListener('blur', () => {
+                    const error = document.getElementById('error-' + field.id) || document.getElementById('error-' + field.name);
+                    if (error) {
+                        if (!field.checkValidity()) {
+                            error.classList.remove('hidden');
+                        } else {
+                            error.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // Compteur de caractères
+            const message = document.getElementById('message');
+            const compteur = document.getElementById('compteur');
+            message.addEventListener('input', () => {
+                const longueur = message.value.length;
+                compteur.textContent = `${longueur} / 500 caractères`;
+            });
+
+            // Récapitulatif accessible
+            const recap = document.getElementById('recap');
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                recap.innerHTML = `
+                <h4 class="font-bold text-lg mb-2">Votre message a été envoyé avec succès !</h4>
+                <ul class="list-disc list-inside">
+                    <li>Nom : ${document.getElementById('nom').value}</li>
+                    <li>Email : ${document.getElementById('email').value}</li>
+                    <li>Téléphone : ${document.getElementById('telephone').value || 'Non renseigné'}</li>
+                    <li>Sujet : ${document.getElementById('sujet').value}</li>
+                    <li>Message : ${document.getElementById('message').value}</li>
+                </ul>
+            `;
+                recap.classList.remove('sr-only');
+                recap.tabIndex = -1;
+                recap.focus();
+                e.target.reset();
+                compteur.textContent = "0 / 500 caractères";
+            });
+        </script>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white p-6" role="contentinfo">
+        <ul class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <li><a href="./plan.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Plan
+                    du site</a></li>
+            <li><a href="./accessibilite.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Référentiel Général d’Amélioration de l’Accessibilité">RGAA</abbr></a>
+            </li>
+            <li><a href="./mentions_legales.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Mentions
+                    légales</a></li>
+            <li><a href="./cgu.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Conditions Générales d'Utilisation">CGU</abbr></a>
+            </li>
+            <li><a href="./rgpd.html"
+                    class="hover:underline focus:ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"><abbr
+                        title="Règlement Général sur la Protection des Données">RGPD</abbr></a>
+            </li>
+        </ul>
+        <p class="text-center text-sm sm:text-base text-gray-400 mt-4">
+            &copy; 2025 - ALAND Mélinda - DRINNHAUSEN Lou - SCHMITT Lola. Tous droits réservés.
+        </p>
+    </footer>
+
+    <!-- JS validation -->
+    <script>
+        document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
+            field.addEventListener('blur', () => {
+                const error = document.getElementById('error-' + field.id) || document.getElementById('error-' + field.name);
+                if (error) {
+                    if (!field.checkValidity()) {
+                        error.classList.remove('hidden');
+                    } else {
+                        error.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const submenuButton = document.getElementById('submenu-button');
+    const submenu = document.getElementById('submenu');
+
+    // Ouvre/ferme le menu burger
+    menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('hidden');
+    });
+
+    // Ouvre/ferme le sous-menu Séries (clic uniquement)
+    submenuButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const expanded = submenuButton.getAttribute('aria-expanded') === 'true';
+        submenuButton.setAttribute('aria-expanded', !expanded);
+        submenu.classList.toggle('hidden');
+    });
+
+    // Ferme le sous-menu si clic à l’extérieur
+    document.addEventListener('click', (e) => {
+        if (!submenuButton.contains(e.target) && !submenu.contains(e.target)) {
+            submenu.classList.add('hidden');
+            submenuButton.setAttribute('aria-expanded', false);
+        }
+    });
+</script>
